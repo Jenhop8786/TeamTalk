@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # SQLite version 3.x
 #   gem install sqlite3
 #
@@ -13,7 +13,6 @@ default: &default
 development:
   <<: *default
   database: db/development.sqlite3
-=======
 # PostgreSQL. Versions 9.1 and up are supported.
 #
 # Install the pg driver:
@@ -31,7 +30,7 @@ development:
 # gem 'pg'
 #
 default: &default
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
@@ -39,7 +38,7 @@ default: &default
 
 development:
   <<: *default
-  database: teamtalk_development
+  database: db/development.sqlite3
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -67,21 +66,19 @@ development:
   #   log, notice, warning, error, fatal, and panic
   # Defaults to warning.
   #min_messages: notice
->>>>>>> cc5375ad93d12163eff6d6145e48a9a57b651309
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-<<<<<<< HEAD
   database: db/test.sqlite3
 
 production:
   <<: *default
   database: db/production.sqlite3
-=======
-  database: teamtalk_test
+
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -107,4 +104,3 @@ production:
   database: teamtalk_production
   username: teamtalk
   password: <%= ENV['TEAMTALK_DATABASE_PASSWORD'] %>
->>>>>>> cc5375ad93d12163eff6d6145e48a9a57b651309
