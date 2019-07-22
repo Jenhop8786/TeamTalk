@@ -15,6 +15,13 @@ class CommentsController < ApplicationController
     end
   end
 
+  def show
+    @messages = Message.find(params[:message_id])
+    @comment = Comment.find(params[:id])
+    render json: @comment
+  end
+
+
   def edit
   end
 
