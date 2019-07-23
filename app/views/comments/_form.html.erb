@@ -1,5 +1,5 @@
 <%= simple_form_for ([@message, @message.comments.build]) do |f| %>
   <%= f.input :content, label: "Respond Here" %>
-  <%= f.submit "Add Comment", class: "btn btn-primary", id: "create"%>
+  <%= f.submit "Add Comment", class: "submit", id: "create"%>
 
 <% end %>
