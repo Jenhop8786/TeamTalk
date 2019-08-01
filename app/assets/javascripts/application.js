@@ -14,5 +14,30 @@
 //= require jquery
 //= require activestorage
 //= require turbolinks
-//=require bootstrap-sprockets
+//= require bootstrap-sprockets
 //= require_tree .
+
+
+$(document).ready( function () {
+
+
+let submit = document.getElementById("create");
+let input = document.getElementById("comment_content");
+let commentContent = document.querySelector("ul");
+//let comment-created-by = document.getElementById("p");
+
+submit.addEventListener("click", function(e) {
+  e.preventDefault()
+  //console.log("winning");
+
+  if (input.value.length > 0) {
+    let li = document.createElement("li");
+    let commentPostedBy = document.getElementById("p");
+    li.appendChild(document.createTextNode(input.value));
+    commentContent.appendChild(li, commentPostedBy);
+    input.value = "";
+  }
+
+});
+
+});

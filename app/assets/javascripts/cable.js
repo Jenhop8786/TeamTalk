@@ -11,3 +11,6 @@
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
+
+//Closures = function ran. function executed. It's never going to run again. But it'going to remember that there are references
+// to those variables. So the child scope always has access to the parent scope 
