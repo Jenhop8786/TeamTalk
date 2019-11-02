@@ -16,7 +16,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5.2'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 gem 'active_model_serializers'
 
 # gem 'redis', '~> 4.0'
